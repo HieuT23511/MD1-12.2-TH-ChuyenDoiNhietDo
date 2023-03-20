@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc Hanh - Chuyen Doi Nhiet Do</title>
+</head>
+<body>
+<h2>Temperature Converter</h2>
+<h4>Type a value in the F field to convert the value to C:</h4>
+<label for="inputFtemp"></label>
+F: <input type="text" id="inputFtemp" placeholder="Enter Fahrenheit" > <br>
+<br>
+<button type="button" onclick="changeTemp(this.value)">Convert</button>
+<p id="displayC"> </p>
+<script>
+    function changeTemp(temp){
+         temp = +document.getElementById('inputFtemp').value;
+        document.getElementById('displayC').innerHTML = `C: ${(temp-32)/1.8}`
+    }
+</script>
+</body>
+</html>
